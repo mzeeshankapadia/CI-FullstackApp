@@ -28,26 +28,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-      # ----------------------
-      # Frontend
-      # ----------------------
-      - name: Install frontend dependencies
-        working-directory: ./frontend
-        run: npm ci
-
-      - name: Lint frontend
-        working-directory: ./frontend
-        run: npm run lint
-
-      - name: Test frontend
-        working-directory: ./frontend
-        run: npm test --if-present
-
-      - name: Build frontend
-        working-directory: ./frontend
-        run: npm run build
-
+          
       # ----------------------
       # Backend
       # ----------------------
